@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "age": "20",
+      "isAdmin": false
+    },
+    {
+      "name": "Jan",
+      "age": 20,
+      "isAdmin": true,
+      "id": 2
+    },
+    {
+      "name": "pin",
+      "age": 15,
+      "isAdmin": false,
+      "id": 4
+    }
+  ],
+  "todo": []
+}

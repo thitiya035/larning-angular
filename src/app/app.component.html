@@ -1,0 +1,42 @@
+<h1>Hi </h1>
+
+<nav>
+    <a routerLink="/home">Home</a>
+    <a [routerLink]="['/users']">User List</a>
+    <a [routerLink]="['/about-us']">About Us</a>
+</nav>
+<router-outlet></router-outlet>
+<!-- 
+<form [formGroup]="userForm">
+    <h3 *ngIf="id?.value !== null">Edit User ID{{id?.value}}</h3>
+    <label> Name: <input type="text" formControlName="name" /> </label>
+    <br />
+    <label> Age: <input type="number" formControlName="age" /> </label>
+    <br />
+    <label>
+        <input type="checkbox" formControlName="isAdmin"> Admin
+    </label>
+
+    <button type="button" *ngIf="id?.value === null" (click)="addUser()">Add</button>
+    <button type="button" *ngIf="id?.value !== null" (click)="updateUser()">Update</button>
+</form>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.name}} ({{user.age | number}})
+        <strong *ngIf="user.isAdmin">Admin</strong>
+        <button type="button" (click)="editUser(user)"> Edit</button>
+        <button type="button" (click)="deleteUser(user.id)"> Delete</button>
+    </li>
+</ul> -->
+<!-- add -+1
+<app-action-bar></app-action-bar> 
+<br>
+add -+5
+<app-action-bar (numberChange)="testNumberChange($event)" [step]="5"></app-action-bar>
+<br>
+add -+10
+<app-action-bar (numberChange)="testNumberChange($event)" [step]="10"></app-action-bar>
+<br><br>
+<button type="button" (click)="testClick()">testEventBinding</button> -->
+<!-- <app-max-mit-meter [minlabal]="appMinLabel" [maxlabal]="appMaxLabel"></app-max-mit-meter> -->
+<!-- <app-add-user></app-add-user> -->

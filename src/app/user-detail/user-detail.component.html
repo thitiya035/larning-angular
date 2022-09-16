@@ -1,0 +1,14 @@
+<ng-container *ngIf="user; else userNotFound">
+    <h4>{{user.name}}</h4>
+</ng-container>
+
+
+<button type="button"
+    [routerLink]="['/users',1]">View User Id 1</button>
+
+<button type="button"
+    [routerLink]="['/users',2]">View User Id 2</button>
+
+<ng-template #userNotFound>
+    <p>User not Found.</p>
+</ng-template>

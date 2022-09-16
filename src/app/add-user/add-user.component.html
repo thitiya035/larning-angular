@@ -1,0 +1,46 @@
+<!-- <p>add-user works!</p> -->
+<form [formGroup]="userForm">
+    <label>
+        Name
+        <input type="text" formControlName="name"/>
+        <span class="erroes" *ngIf="name?.touched && name?.errors as errors">
+            Name is required
+        </span>
+    </label>
+    <br> <br>
+    <label>
+        Age
+        <input type="text" formControlName="age"/>
+        <span class="erroes" *ngIf="age?.touched && age?.errors as errors">
+            <ng-container *ngIf="errors?.['required']">
+                <div>
+                    Age is required
+                </div>
+            </ng-container>
+            <ng-container *ngIf="errors?.['min'] as minError">
+                <div>
+                    Age {{minError.actual}} must is not valid. <br>
+                    Age must be greater than equal to {{minError.min |number}}
+                </div>
+            </ng-container>
+        </span>
+    </label>
+    <br> <br>
+    <label>
+        <input type="checkbox" formControlName="isAdmin"/>
+        Admin
+    </label>
+    <div>
+        <button type="button" [disabled]="userForm.invalid">Save</button>
+        <button type="button" (click)="reset()">
+            reset
+        </button>
+    </div>
+</form>
+
+<p>Touched: {{userForm.touched}}</p>
+<p>dirty: {{userForm.dirty}}</p>
+<p>valid: {{userForm.valid}}</p>
+<p>errors: {{userForm.errors}}</p>
+
+<pre> {{userForm.value | json}}</pre>
